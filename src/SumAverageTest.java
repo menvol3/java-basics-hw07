@@ -8,32 +8,34 @@ import org.testng.annotations.Test;
 public class SumAverageTest {
 
   /**
-   * Test data for lower and ipper bounds.
+   * Test data for lower and upper bounds.
    *
    * @return test data array
    */
   @DataProvider(name = "Sum")
   public static Object[][] sum() {
     return new Object[][]{
-        {1, 100, 5050},
-        {-100, 100, 0},
-        {1, 1, 1}
-        // TODO add 2 more test data here
+            {1, 100, 5050},
+            {-100, 100, 0},
+            {1, 1, 1},
+            {4, 9, 39},
+            {2, 60, 1829}
     };
   }
 
   /**
-   * Test data for lower and ipper bounds.
+   * Test data for lower and upper bounds.
    *
    * @return test data array
    */
   @DataProvider(name = "Average")
   public static Object[][] average() {
     return new Object[][]{
-        {1, 100, 50.5},
-        {-100, 100, 0.0},
-        {1, 1, 1.0}
-        // TODO add 2 more test data here
+            {1, 100, 50.5},
+            {-100, 100, 0.0},
+            {1, 1, 1.0},
+            {3, 3, 3.0},
+            {1500, 1500, 1500}
     };
   }
 
