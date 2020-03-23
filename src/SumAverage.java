@@ -3,61 +3,61 @@
  */
 public class SumAverage {
 
-  /**
-   * Computes sum of running integers from a lower bound to an upper bound.
-   *
-   * @param lowerBound lower bound
-   * @param upperBound upper bound
-   * @return sum of integers
-   */
-  public static int sum(int lowerBound, int upperBound) {
-    int sum = 0;
-    for (int i = lowerBound; i <= upperBound; i = i + 1) {
-      sum = sum + i;
+    /**
+     * Computes sum of running integers from a lower bound to an upper bound.
+     *
+     * @param lowerBound lower bound
+     * @param upperBound upper bound
+     * @return sum of integers
+     */
+    public static int sum(int lowerBound, int upperBound) {
+        int sum = 0;
+        for (int i = lowerBound; i <= upperBound; i = i + 1) {
+            sum = sum + i;
+        }
+        return sum;
     }
-    return sum;
-  }
 
-  /**
-   * Computes sum of running integers from a lower bound to an upper bound within an array.
-   *
-   * @param numbers running integers array
-   * @return sum of integers
-   */
-  public static int sum(int[] numbers) {
-    int sum = 0;
-    for (int number : numbers) {
-      sum += number;
+    /**
+     * Computes sum of running integers from a lower bound to an upper bound within an array.
+     *
+     * @param numbers running integers array
+     * @return sum of integers
+     */
+    public static int sum(int[] numbers) {
+        int sum = 0;
+        for (int number : numbers) {
+            sum += number;
+        }
+        return sum;
     }
-    return sum;
-  }
 
-  /**
-   * Computes average of running integers from a lower bound to an upper bound.
-   *
-   * @param lowerBound lower bound
-   * @param upperBound upper bound
-   * @return average of integers
-   */
-  public static double average(int lowerBound, int upperBound) {
-    double average = 0;
-    while (lowerBound > average) {
-      average = lowerBound + upperBound;
+    /**
+     * Computes average of running integers from a lower bound to an upper bound.
+     *
+     * @param lowerBound lower bound
+     * @param upperBound upper bound
+     * @return average of integers
+     */
+    public static double average(int lowerBound, int upperBound) {
+        double average = 0;
+        while (lowerBound > average) {
+            average = lowerBound + upperBound;
+        }
+        return average / 2;
     }
-    return average / 2;
-  }
 
-  /**
-   * Computes average of running integers from a lower bound to an upper bound within an array.
-   *
-   * @param numbers running integers array
-   * @return average of integers
-   */
-  public static double average(int[] numbers) {
-    double average = 0;
-    do {
-      average = numbers[0] + numbers[1] ;
-    }while (numbers[1] <= numbers[2]);
-    return average ;
-  }
+    /**
+     * Computes average of running integers from a lower bound to an upper bound within an array.
+     *
+     * @param numbers running integers array
+     * @return average of integers
+     */
+    public static double average(int[] numbers) {
+        double a = 0;
+        do {
+            a = numbers[0] + numbers[numbers.length - 1];
+        } while (a < numbers[0]);
+        return a / 2;
+    }
 }
